@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">AndroidApplication</string>
+    <string name="description_hint">description</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint2">Passwor</string>
+    <string name="email_hint2">Email</string>
+    <string name="login_text">login</string>
+    <string name="signup_text">sign up</string>
+    <string name="password_hint">password</string>
+    <string name="Login_hint">Login</string>
+    <string name="signup_hint">sign up</string>
+    <string name="c" />
+    <string name="confitmpas_hint">confirm password</string>
+    <string name="back_content">back</string>
+    <string name="back_OnClick">GoBack</string>
+    <string name="avatar_hint">avatar</string>
+    <string name="username_hint">select username</string>
+    <string name="saveASccount_hint">save account settings</string>
+    <string name="search">search_hint</string>
+    <string name="Settings_hint">tAccount Settings</string>
+    <string name="Setting_h">Account Settings</string>
+    <string name="logout_butt">Logout</string>
+    <string name="image_hint">image</string>
+    <string name="descr_hint">Add Description</string>
+    <string name="addpost_hint">Add post</string>
+    <string name="bottom_menu_hint">Home</string>
+    <string name="bottom_notification_text">Notification</string>
+    <string name="bottom_ac_text">Account</string>
 </resources>
