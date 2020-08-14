@@ -3,6 +3,8 @@ package com.example.androidapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Build;
@@ -16,16 +18,45 @@ import android.widget.Toolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    private BottomNavigationView mainBottomNav;
 
+    private BottomNavigationView mainBottomNav;
+    private HomeFragment homeFragment;
+    private NotificationFragment notificationFragment;
+    private AccountFragment accountFragment;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         
+
         mainBottomNav=(BottomNavigationView)findViewById(R.id.BottomView);
+        //fragments
+        homeFragment=new HomeFragment();
+        notificationFragment=new NotificationFragment();
+        accountFragment=new AccountFragment();
+        mainBottomNav.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.bottomActionHome:
+                        replaceFragment(homeFragment);
+                    case R.id.BottomNotification:
+                        replaceFragment(notificationFragment);
+
+                    case R.id.BottonAccount:
+                        replaceFragment(accountFragment);
+                        default :
+                            return ;
+
+                }
+
+            }
+
+        });
+
+
+
     }
 
     @Override
@@ -55,5 +86,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent =new Intent(MainActivity.this,NewPostActivity.class);
         startActivity(intent);
         finish();
+    }
+    private void replaceFragment(Fragment fragment){
+        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.BottomView,fragment);
+        fragmentTransaction.commit();
     }
 }

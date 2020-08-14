@@ -3,14 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/bottomActionHome"
         android:icon="@drawable/baseline_home_black_18dp"
-        android:title="@string/bottom_menu_hint"
+        android:title="@string/bottom_home_text"
         app:showAsAction="never" />
     <item
+        android:id="@+id/BottomNotification"
         android:icon="@drawable/baseline_notifications_black_18dp"
         android:title="@string/bottom_notification_text"
         app:showAsAction="never" />
     <item
+        android:id="@+id/BottonAccount"
         android:icon="@drawable/baseline_person_black_18dp"
         android:title="@string/bottom_ac_text"
         app:showAsAction="never" />
