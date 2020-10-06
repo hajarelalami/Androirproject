@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,9 +21,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mainBottomNav;
-    private HomeFragment homeFragment;
+    private FragmentHome homeFragment;
     private NotificationFragment notificationFragment;
     private AccountFragment accountFragment;
+    private FrameLayout main_container;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         mainBottomNav=(BottomNavigationView)findViewById(R.id.BottomView);
         //fragments
-        homeFragment=new HomeFragment();
+        homeFragment=new FragmentHome ();
         notificationFragment=new NotificationFragment();
         accountFragment=new AccountFragment();
         mainBottomNav.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void replaceFragment(Fragment fragment){
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.BottomView,fragment);
+        fragmentTransaction.replace(R.id.main_container,fragment);
         fragmentTransaction.commit();
     }
 }

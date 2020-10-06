@@ -52,7 +52,7 @@ public class NewPostActivity extends AppCompatActivity {
             Uri ImageUri=data.getData();
             CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).setAspectRatio(1,1).start(this);
         }
-         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+         else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
         }
 
