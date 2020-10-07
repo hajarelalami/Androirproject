@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".activities.RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/regLogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent"
-        tools:context=".LoginActivity"
+        tools:context=".activities.LoginActivity"
         tools:layout_editor_absoluteX="-190dp"
         tools:layout_editor_absoluteY="0dp">
 
