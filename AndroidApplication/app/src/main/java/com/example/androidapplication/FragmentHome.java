@@ -62,7 +62,7 @@ public class FragmentHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_home,container,false);
-        blog_list_view = getActivity().findViewById(R.id.blogListView);
+        blog_list_view = getActivity().findViewById(R.id.blog_list_view);
         // Inflate the layout for this fragment
         return view;
     }

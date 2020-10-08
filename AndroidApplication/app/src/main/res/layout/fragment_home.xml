@@ -6,7 +6,7 @@
     tools:context=".FragmentHome">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/blogListView"
+        android:id="@+id/blog_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
