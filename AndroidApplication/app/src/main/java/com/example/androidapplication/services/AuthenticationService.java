@@ -17,7 +17,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AuthenticationService {
-    public static final String API_BASE_URL = "http://192.168.1.12:8081";
+    public static final String API_BASE_URL = "http://192.168.1.103:8081";
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
@@ -43,7 +43,7 @@ public class AuthenticationService {
             @Override
             public void onResponse(Call<TokenEntity> call, Response<TokenEntity> response) {
                 if (response.isSuccessful()) {
-                    Log.d("Succesful", "Login Ok");
+                    Log.d("Successful", "Login Ok");
                     AuthenticationInterceptor.AUTH_TOKEN = response.body().getToken();
                     getUserInfo();
                 } else {
@@ -65,7 +65,7 @@ public class AuthenticationService {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if (response.isSuccessful()) {
-                    Log.d("Succesful", "Login Ok");
+                    Log.d("Successful", "Login Ok");
                     authenticationCallBack.onAuthenticationSuccessful();
                 } else {
                     Log.d("Error", "Login KO");
